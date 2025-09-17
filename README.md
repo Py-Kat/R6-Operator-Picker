@@ -7,7 +7,7 @@ the user the ability to
 choose a random operator in
 [**Tom Clancy's Rainbow Six: Siege**](https://www.ubisoft.com/en-us/game/rainbow-six/siege)!
 
-> # | Previews!
+# | Previews!
 > ## | Default Screen:
 >> ![MainScreen.png](images/MainScreen.png)
 >
@@ -42,7 +42,7 @@ appear here as well!* )
 > - [1.0.1](legacy/v1.0.1) - This version includes a couple very minor changes.
 > - [2.0](legacy/v2.0) - In this version, the script was completely rewritten and slightly improved upon.
 
-# | Final Notes:
+# || Final Notes:
 - I plan to make a
 patch every season release of
 [**Tom Clancy's Rainbow Six: Siege**](https://www.ubisoft.com/en-us/game/rainbow-six/siege),
