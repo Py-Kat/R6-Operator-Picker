@@ -7,8 +7,6 @@ window.title("R6 Operator Picker! v3.0!")
 window.geometry("1280x720")
 window.resizable(True, True)
 window.configure(bg="black")
-icon = tk.PhotoImage(file="images/icons/icon.png")
-window.iconphoto(True, icon)
 default_color = "grey"
 
 
