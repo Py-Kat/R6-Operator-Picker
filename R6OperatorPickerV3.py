@@ -1,6 +1,7 @@
 import tkinter as tk
 from random import choice
 
+
 # MAIN WINDOW
 window = tk.Tk()
 window.title(
@@ -19,7 +20,30 @@ window.configure(
 default_color = "grey"
 
 
-# COMMANDS
+# Random Operator Label
+random_operator = tk.StringVar(
+    value="Press a button!"
+)
+op_label = tk.Label(
+    window,
+    textvariable=random_operator,
+    font=(
+        "Helvetica",
+        40
+    )
+)
+op_label.config(
+    bg="black",
+    fg=default_color
+)
+op_label.place(
+    relx=0.5,
+    rely=0.25,
+    anchor="center"
+)
+
+
+# Choose Attacker Function
 def choose_attacker():
     attacker = choice([
         "Glaz",
@@ -72,6 +96,30 @@ def choose_attacker():
     return
 
 
+# Choose Attacker Button
+random_attacker = tk.Button(
+    window,
+    text="Random Attacker",
+    command=choose_attacker,
+    font=(
+        "Helvetica",
+        28
+    )
+)
+random_attacker.config(
+    activebackground="black",
+    activeforeground="red",
+    bg="red",
+    fg="black"
+)
+random_attacker.place(
+    relx=0.25,
+    rely=0.6,
+    anchor="center"
+)
+
+
+# Choose Defender Function
 def choose_defender():
     defender = choice([
         "Kapkan",
@@ -124,18 +172,30 @@ def choose_defender():
     return
 
 
-def reset_text():
-    global default_color
-    default_color = "grey"
-    op_label.config(
-        fg=default_color
+# Choose Defender Button
+random_defender = tk.Button(
+    window,
+    text="Random Defender",
+    command=choose_defender,
+    font=(
+        "Helvetica",
+        28
     )
-    random_operator.set(
-        "Press a button!"
-    )
-    return
+)
+random_defender.config(
+    activebackground="black",
+    activeforeground="blue",
+    bg="blue",
+    foreground="black"
+)
+random_defender.place(
+    relx=0.75,
+    rely=0.6,
+    anchor="center"
+)
 
 
+# Change Logs Function
 def show_changelogs():
     changelog_window = tk.Toplevel(window)
     changelog_window.title(
@@ -174,8 +234,7 @@ def show_changelogs():
         changelog_window,
         text=
         """
-        Please report any issues you encounter or suggestions you have in the GitHub repository.
-        \nOr message directly on Discord @helvetika! ( May need to request first! )""",
+        Please report any issues you encounter or suggestions you have in the GitHub repository!""",
         font=("Helvetica", 10)
     )
     info_label.config(
@@ -206,75 +265,7 @@ def show_changelogs():
     )
 
 
-# BUTTONS
-
-# Random Operator
-random_operator = tk.StringVar(
-    value="Press a button!"
-)
-op_label = tk.Label(
-    window,
-    textvariable=random_operator,
-    font=(
-        "Helvetica",
-        40
-    )
-)
-op_label.config(
-    bg="black",
-    fg=default_color
-)
-op_label.place(
-    relx=0.5,
-    rely=0.25,
-    anchor="center"
-)
-
-#Choose Attacker
-random_attacker = tk.Button(
-    window,
-    text="Random Attacker",
-    command=choose_attacker,
-    font=(
-        "Helvetica",
-        28
-    )
-)
-random_attacker.config(
-    activebackground="black",
-    activeforeground="red",
-    bg="red",
-    fg="black"
-)
-random_attacker.place(
-    relx=0.25,
-    rely=0.6,
-    anchor="center"
-)
-
-# Choose Defender
-random_defender = tk.Button(
-    window,
-    text="Random Defender",
-    command=choose_defender,
-    font=(
-        "Helvetica",
-        28
-    )
-)
-random_defender.config(
-    activebackground="black",
-    activeforeground="blue",
-    bg="blue",
-    foreground="black"
-)
-random_defender.place(
-    relx=0.75,
-    rely=0.6,
-    anchor="center"
-)
-
-# Change Logs
+# Change Logs Button
 changelog_button = tk.Button(
     window,
     text="Change Logs",
@@ -296,7 +287,21 @@ changelog_button.place(
     anchor="sw"
 )
 
-# Reset
+
+# Reset Function
+def reset_text():
+    global default_color
+    default_color = "grey"
+    op_label.config(
+        fg=default_color
+    )
+    random_operator.set(
+        "Press a button!"
+    )
+    return
+
+
+# Reset Button
 reset_button = tk.Button(
     window,
     text="Reset",
@@ -317,6 +322,7 @@ reset_button.place(
     rely=0.95,
     anchor="s"
 )
+
 
 # Close
 exit_button = tk.Button(
@@ -339,6 +345,7 @@ exit_button.place(
     rely=0.95,
     anchor="se"
 )
+
 
 # START
 window.mainloop()
