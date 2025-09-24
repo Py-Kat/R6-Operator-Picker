@@ -3,10 +3,19 @@ from random import choice
 
 # MAIN WINDOW
 window = tk.Tk()
-window.title("R6 Operator Picker! v3.0!")
-window.geometry("1280x720")
-window.resizable(True, True)
-window.configure(bg="black")
+window.title(
+    "R6 Operator Picker! v3.0!"
+)
+window.geometry(
+    "1280x720"
+)
+window.resizable(
+    True,
+    True
+)
+window.configure(
+    bg="black"
+)
 default_color = "grey"
 
 
@@ -54,8 +63,12 @@ def choose_attacker():
     ])
     global default_color
     default_color = "red"
-    op_label.config(fg=default_color)
-    random_operator.set(f"YOUR ATTACKER IS: \n\n{attacker} !")
+    op_label.config(
+        fg=default_color
+    )
+    random_operator.set(
+        f"YOUR ATTACKER IS: \n\n{attacker} !"
+    )
     return
 
 
@@ -102,25 +115,42 @@ def choose_defender():
     ])
     global default_color
     default_color = "blue"
-    op_label.config(fg=default_color)
-    random_operator.set(f"YOUR DEFENDER IS: \n\n{defender} !")
+    op_label.config(
+        fg=default_color
+    )
+    random_operator.set(
+        f"YOUR DEFENDER IS: \n\n{defender} !"
+    )
     return
 
 
 def reset_text():
     global default_color
     default_color = "grey"
-    op_label.config(fg=default_color)
-    random_operator.set("Press a button!")
+    op_label.config(
+        fg=default_color
+    )
+    random_operator.set(
+        "Press a button!"
+    )
     return
 
 
 def show_changelogs():
     changelog_window = tk.Toplevel(window)
-    changelog_window.title("R6 Operator Picker Change Logs!")
-    changelog_window.geometry("840x420")
-    changelog_window.resizable(False, False)
-    changelog_window.configure(bg="black")
+    changelog_window.title(
+        "R6 Operator Picker Change Logs!"
+    )
+    changelog_window.geometry(
+        "840x420"
+    )
+    changelog_window.resizable(
+        False,
+        False
+    )
+    changelog_window.configure(
+        bg="black"
+    )
     changes_label = tk.Label(
         changelog_window,
         text=
@@ -185,7 +215,10 @@ random_operator = tk.StringVar(
 op_label = tk.Label(
     window,
     textvariable=random_operator,
-    font=("Helvetica", 40)
+    font=(
+        "Helvetica",
+        40
+    )
 )
 op_label.config(
     bg="black",
@@ -202,7 +235,10 @@ random_attacker = tk.Button(
     window,
     text="Random Attacker",
     command=choose_attacker,
-    font=("Helvetica", 28)
+    font=(
+        "Helvetica",
+        28
+    )
 )
 random_attacker.config(
     activebackground="black",
@@ -221,7 +257,10 @@ random_defender = tk.Button(
     window,
     text="Random Defender",
     command=choose_defender,
-    font=("Helvetica", 28)
+    font=(
+        "Helvetica",
+        28
+    )
 )
 random_defender.config(
     activebackground="black",
@@ -240,7 +279,10 @@ changelog_button = tk.Button(
     window,
     text="Change Logs",
     command=show_changelogs,
-    font=("Helvetica", 14)
+    font=(
+        "Helvetica",
+        14
+    )
 )
 changelog_button.config(
     activebackground="black",
@@ -259,7 +301,10 @@ reset_button = tk.Button(
     window,
     text="Reset",
     command=reset_text,
-    font=("Helvetica", 8)
+    font=(
+        "Helvetica",
+        8
+    )
 )
 reset_button.config(
     activebackground="black",
@@ -278,7 +323,10 @@ exit_button = tk.Button(
     window,
     text="Close The Program",
     command=window.destroy,
-    font=("Helvetica", 14)
+    font=(
+        "Helvetica",
+        14
+    )
 )
 exit_button.config(
     activebackground="red",
