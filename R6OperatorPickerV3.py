@@ -117,7 +117,7 @@ def reset_text():
 
 def show_changelogs():
     changelog_window = tk.Toplevel(window)
-    changelog_window.title("R6 Operator Picker ChangeLogs!")
+    changelog_window.title("R6 Operator Picker Change Logs!")
     changelog_window.geometry("840x420")
     changelog_window.resizable(False, False)
     changelog_window.configure(bg="black")
@@ -129,7 +129,7 @@ def show_changelogs():
         \n\nv1.0.1 - Made code more readable and reformatted some text! - 8/21/25
         \n\nv2.0 - Completely rewrote the script and added more text styling with colorama! - 8/22/25
         \n\nv3.0 - Completely rewrote the script again to instead use a full GUI with tkinter! - 9/17/25""",
-        font=("Helvetica", 14),
+        font=("Helvetica", 14)
     )
     changes_label.config(
         bg="black",
@@ -146,7 +146,7 @@ def show_changelogs():
         """
         Please report any issues you encounter or suggestions you have in the GitHub repository.
         \nOr message directly on Discord @helvetika! ( May need to request first! )""",
-        font=("Helvetica", 10),
+        font=("Helvetica", 10)
     )
     info_label.config(
         bg="black",
@@ -161,7 +161,7 @@ def show_changelogs():
         changelog_window,
         text="Close Changelogs",
         command=changelog_window.destroy,
-        font=("Helvetica", 14),
+        font=("Helvetica", 14)
     )
     close_logs_button.config(
         activebackground="red",
