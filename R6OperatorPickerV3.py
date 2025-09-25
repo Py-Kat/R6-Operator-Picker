@@ -29,7 +29,8 @@ op_label = tk.Label(
     textvariable=random_operator,
     font=(
         "Helvetica",
-        40
+        40,
+        "bold"
     )
 )
 op_label.config(
@@ -103,7 +104,8 @@ random_attacker = tk.Button(
     command=choose_attacker,
     font=(
         "Helvetica",
-        28
+        28,
+        "bold"
     )
 )
 random_attacker.config(
@@ -179,7 +181,8 @@ random_defender = tk.Button(
     command=choose_defender,
     font=(
         "Helvetica",
-        28
+        28,
+        "bold"
     )
 )
 random_defender.config(
@@ -219,7 +222,11 @@ def show_changelogs():
         \n\nv1.0.1 - Made code more readable and reformatted some text! - 8/21/25
         \n\nv2.0 - Completely rewrote the script and added more text styling with colorama! - 8/22/25
         \n\nv3.0 - Completely rewrote the script again to instead use a full GUI with tkinter! - 9/17/25""",
-        font=("Helvetica", 14)
+        font=(
+            "Helvetica",
+            14,
+            "bold"
+        )
     )
     changes_label.config(
         bg="black",
@@ -235,7 +242,11 @@ def show_changelogs():
         text=
         """
         Please report any issues you encounter or suggestions you have in the GitHub repository!""",
-        font=("Helvetica", 10)
+        font=(
+            "Helvetica",
+            10,
+            "bold"
+        )
     )
     info_label.config(
         bg="black",
@@ -250,7 +261,11 @@ def show_changelogs():
         changelog_window,
         text="Close Changelogs",
         command=changelog_window.destroy,
-        font=("Helvetica", 14)
+        font=(
+            "Helvetica",
+            14,
+            "bold"
+        )
     )
     close_logs_button.config(
         activebackground="red",
@@ -272,7 +287,8 @@ changelog_button = tk.Button(
     command=show_changelogs,
     font=(
         "Helvetica",
-        14
+        14,
+        "bold"
     )
 )
 changelog_button.config(
@@ -308,7 +324,8 @@ reset_button = tk.Button(
     command=reset_text,
     font=(
         "Helvetica",
-        8
+        8,
+        "bold"
     )
 )
 reset_button.config(
@@ -331,7 +348,8 @@ exit_button = tk.Button(
     command=window.destroy,
     font=(
         "Helvetica",
-        14
+        14,
+        "bold"
     )
 )
 exit_button.config(
