@@ -5,7 +5,7 @@ from random import choice
 # MAIN WINDOW
 window = tk.Tk()
 window.title(
-    "R6 Operator Picker! v3.0!"
+    "R6 Operator Picker!"
 )
 window.geometry(
     "1280x720"
@@ -362,6 +362,26 @@ exit_button.place(
     relx=0.95,
     rely=0.95,
     anchor="se"
+)
+
+# Version Label
+version_label = tk.Label(
+    window,
+    text="Version 3.0.1",
+    font=(
+        "Helvetica",
+        10,
+        "bold"
+    )
+)
+version_label.config(
+    background="black",
+    foreground=default_color
+)
+version_label.place(
+    relx=0.01,
+    rely=0.01,
+    anchor="nw"
 )
 
 
