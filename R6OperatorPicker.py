@@ -1,6 +1,20 @@
 import tkinter as tk
 from random import choice
+import sys
+import os
 
+
+# noinspection PyProtectedMember
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except AttributeError:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
+
+icon = resource_path("icon.png")
+default_color = "grey"
 
 # MAIN WINDOW
 window = tk.Tk()
@@ -17,8 +31,12 @@ window.resizable(
 window.configure(
     bg="black"
 )
-default_color = "grey"
-
+window.iconphoto(
+    True,
+    tk.PhotoImage(
+        file=icon
+    )
+)
 
 # Random Operator Label
 random_operator = tk.StringVar(
